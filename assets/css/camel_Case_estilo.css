@@ -1,169 +1,219 @@
-@charset "UTF-8";
+@charset "UTF-8"; /* Define o conjunto de caracteres como UTF-8 */
 
-:root{
-  --bk-color: #004D6E;
-  --bk-login: #fff0f5;
-  --bk-img-login: #038BAE;
-  --bk-main: #2EAACC;
-  --txt-color: #f5f5f5;
-  --bnt-color-br: #E5E1E2;
-  --bnt-color-bk: #FBED00;
-  --bnt-color-hr: #4A4145;
+/* Variáveis CSS para cores e estilos reutilizáveis */
+
+:root {
+    --bk-color: #004D6E;  /* Cor de fundo da página */
+    --bk-login: #fff0f5;  /* Cor de fundo da área de login */
+    --bk-img-login: #038BAE;  /* Cor de fundo para a imagem de login */
+    --bk-main: #2EAACC; /* Cor de fundo da seção principal */
+    --txt-color: #f5f5f5; /* Cor do texto padrão */
+    --bnt-color-br: #E5E1E2;  /* Cor da borda dos botões e inputs */
+    --bnt-color-bk: #FBED00; /* Cor de fundo dos botões */
+    --bnt-color-hr: #4A4145;  /* Cor de fundo dos botões ao passar o mouse (hover) */
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Reset de margens e preenchimento para todos os elementos */
+* {
+    margin: 0;  /* Remove toda a margem padrão de todos os elementos */
+    padding: 0; /* Remove todo o preenchimento interno padrão */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo do tamanho total */
 }
 
+/* Estilo base do HTML e do body */
 html,
 body {
-  margin: 0px;
-  padding: 0px;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--bk-color);
-  box-sizing: border-box;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    margin: 0; /* Remove as margens padrão do navegador */
+    padding: 0; /* Remove o preenchimento interno padrão */
+    font-family: Arial, Helvetica, sans-serif; /* Fonte padrão */
+    background-color: var(--bk-color); /* Fundo da página */
+    box-sizing: border-box; /* Inclui o padding e a borda no cálculo total da largura/altura */
+    min-height: 100vh; /* Garante que o fundo cubra toda a tela */
+    width: 100%; /* Define a largura como 100% da tela */
+    display: flex;  /* Centraliza o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo dentro do body */
+    align-items: center; /* Centraliza verticalmente o conteúdo dentro do body */
 }
 
+/* Estilo da seção principal */
 main {
-  border-radius: 7px;
-  color: var(--txt-color);
-  background-color: var(--bk-main);
-  margin-bottom: 3px;
-  width: 250px;
-  height: auto;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0px 0px 10px #808080;
+    border-radius: 7px; /* Bordas arredondadas */
+    color: var(--txt-color); /* Cor do texto */
+    background-color: var(--bk-main); /* Cor de fundo */
+    margin: 20px; /* Adiciona margem ao redor em telas menores */
+    width: 95%; /* Ocupa quase toda a largura em mobile */
+    max-width: 400px; /* Largura máxima para não esticar demais em tablets */
+    height: auto; /* Altura ajustável conforme o conteúdo interno */
+    border-radius: 15px; /* Sobrescreve o valor anterior e define cantos ainda mais arredondados */
+    overflow: hidden;  /* Oculta conteúdo que ultrapassar as bordas */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
 }
 
+/* Seção interna centralizada e com padding */
 section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 7px;
+    display: flex; /* Ativa o modelo de layout flexível */
+    flex-direction: column; /* Organiza os elementos filhos em coluna (um embaixo do outro) */
+    align-items: center; /* Centraliza os itens horizontalmente dentro da seção */
+    padding: 20px; /* Espaçamento interno maior para toque */
 }
 
+/* Estilo da imagem de topo */
 #imagem {
-  display: block;
-  background: var(--bk-img-login) url(/bancocentral.png) no-repeat;
-  background-size: cover;
-  background-position: center top;
-  height: 150px;
-  width: 100%;
-  border-radius: 20px 20px 0 0;
-  margin-bottom: 15px;
+    display: block; /* Garante que o elemento seja tratado como bloco */
+    background: var(--bk-img-login) url(/Bank.logo.png) no-repeat center top; /* Cor de fundo e imagem centralizada no topo, sem repetição */
+    background-size: cover;  /* Faz com que a imagem de fundo cubra toda a área do elemento */
+    height: 120px; /* Altura um pouco menor para mobile */
+    width: 30%; /* Define a largura como 30% do elemento pai */
+    border-radius: 15px 15px 0 0; /* Arredonda apenas os cantos superiores */
+    margin-bottom: 15px; /* Espaço abaixo da imagem */
 }
 
+/* Título */
 h1 {
-  text-align: center;
-  margin-bottom: 15px;
-  font-size: 1.5em;
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 15px; /* Espaço abaixo do título */
+    font-size: 1.6em; /* Tamanho de fonte adequado para mobile */
 }
 
+/* Parágrafos */
 p {
-  text-align: center;
-  padding: 7px;
-  margin: 5px 0;
+    text-align: center; /* Centraliza o texto */
+    padding: 10px;  /* Espaçamento interno ao redor do conteúdo */
+    margin: 10px 0;  /* Espaço acima e abaixo do parágrafo */
+    font-size: 1em; /* Tamanho de fonte base para o texto */
 }
 
+/* Rótulos dos inputs */
 label {
-  margin-top: 3px;
-  margin-bottom: 3px;
-  font-weight: bold;
+    margin-top: 10px;  /* Espaço acima do rótulo */
+    margin-bottom: 5px; /* Espaço abaixo do rótulo */
+    font-weight: bold; /* Deixa o texto em negrito */
+    font-size: 1em;  /* Tamanho padrão da fonte */
 }
 
-select{
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid var(--bnt-color-br);
-  margin-bottom: 15px;
-  width: 100%;
+/* Estilo para dropdown (select) */
+select {
+    padding: 12px; /* Espaçamento interno para facilitar o toque */
+    border-radius: 5px; /* Bordas levemente arredondadas */
+    border: 1px solid var(--bnt-color-br);  /* Borda com cor definida por variável */
+    margin-bottom: 20px; /* Espaço abaixo do select */
+    width: 100%;  /* Ocupa toda a largura do container */
+    font-size: 1em; /* Tamanho padrão da fonte */
 }
 
+/* Botão padrão */
 button {
-  border-radius: 4px;
-  border: 1px solid var(--bnt-color-br);
-  background-color: var(--bnt-color-bk);
-  color: #333;
-  padding: 10px 15px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    border-radius: 5px; /* Bordas arredondadas */
+    border: none; /* Remove a borda padrão para um visual mais limpo */
+    background-color: var(--bnt-color-bk);  /* Cor de fundo do botão */
+    color: #333; /* Cor do texto do botão */
+    padding: 12px 25px; /* Espaçamento interno vertical e horizontal */
+    cursor: pointer; /* Muda o cursor para ponteiro ao passar por cima */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+    font-size: 1em; /* Tamanho da fonte do botão */
 }
 
+/* Efeito hover no botão */
 button:hover {
-background-color: var(--bnt-color-hr);
-color: var(--txt-color);
+    background-color: var(--bnt-color-hr); /* Muda a cor de fundo ao passar o mouse */
+    color: var(--txt-color); /* Muda a cor do texto ao passar o mouse */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Estilos para telas maiores (tablets - largura mínima de 600px) */
+@media (min-width: 600px) {
+    main {
+        margin: 30px; /* Aumenta a margem externa */
+        max-width: 600px; /* Permite que o main cresça até 600px */
+        border-radius: 20px; /* Bordas mais arredondadas */
+    }
+
+    section {
+        padding: 30px; /* Mais espaço interno para conforto visual */
+    }
+
+    #imagem {
+        height: 150px; /* Aumenta a altura da imagem */
+        border-radius: 20px 20px 0 0;  /* Bordas superiores mais arredondadas */
+        margin-bottom: 20px; /* Espaço abaixo da imagem */
+    }
+
+    h1 {
+        font-size: 2em; /* Fonte maior para títulos em telas maiores */
+        margin-bottom: 20px; /* Mais espaço abaixo do título */
+    }
+
+    p {
+        font-size: 1.1em; /* Fonte levemente maior para leitura confortável */
+        padding: 15px; /* Mais espaço interno */
+        margin: 15px 0; /* Mais espaço acima e abaixo */
+    }
+
+    label {
+        font-size: 1.1em; /* Tamanho da fonte ajustado para telas maiores */
+        margin-top: 15px; /* Espaço acima do rótulo */
+        margin-bottom: 8px; /* Espaço abaixo do rótulo */
+    }
+
+    select {
+        padding: 15px; /* Mais espaço interno para facilitar o uso */
+        border-radius: 7px; /* Bordas mais suaves */
+        margin-bottom: 25px; /* Espaço abaixo do elemento select */
+        font-size: 1.1em; /* Aumenta o tamanho da fonte para facilitar a leitura */
+    }
+
+    button {
+        padding: 15px 30px; /* Botão maior para facilitar o clique */
+        border-radius: 7px; /* Bordas arredondadas para um design mais suave e moderno */
+        font-size: 1.1em; /* Aumenta o tamanho da fonte para destacar o texto do botão */
+
+    }
+}
+
+/* Estilos para telas maiores (desktops - largura mínima de 992px) */
+@media (min-width: 992px) {
+    main {
+        max-width: 500px; /* Largura fixa para desktop */
+        margin: 50px auto; /* Centraliza horizontalmente em telas grandes */
+        border-radius: 25px; /* Bordas bem arredondadas */
+    }
+
+    section {
+        padding: 35px; /* Espaço interno aumentado para tela grande */
+    }
+
+    #imagem {
+        height: 180px;  /* Imagem maior para desktop */
+        border-radius: 25px 25px 0 0;  /* Bordas ainda mais suaves */
+        margin-bottom: 25px; /* Espaço inferior abaixo da imagem para separação do conteúdo seguinte */
+    }
+
+    h1 {
+        font-size: 2.2em;  /* Título maior para visualização em desktops */
+        margin-bottom: 25px; /* Espaço abaixo do título */
+    }
+
+    p {
+        font-size: 1.2em;  /* Texto maior para melhor legibilidade */
+        padding: 20px; /* Espaçamento interno ao redor do parágrafo */
+        margin: 20px 0;  /* Margem acima e abaixo do parágrafo */
+    }
+
+    label {
+        font-size: 1.2em; /* Fonte maior para melhor leitura */
+        margin-top: 20px;  /* Espaço acima do rótulo */
+        margin-bottom: 10px; /* Espaço abaixo do rótulo */
+    }
+
+    select {
+        padding: 18px; /* Espaço interno aumentado para tornar o elemento mais confortável ao toque e à leitura */
+        border-radius: 9px; /* Bordas mais arredondadas para um visual moderno */
+        margin-bottom: 30px; /* Espaço inferior abaixo do select */
+        font-size: 1.2em; /* Fonte maior para facilitar a leitura das opções */
+    }
+
+    button {
+        padding: 18px 35px; /* Aumenta o tamanho do botão: 18px de altura, 35px de largura, para melhor usabilidade */
+        border-radius: 9px; /* Bordas mais suaves para acompanhar o estilo geral */
+        font-size: 1.2em; /* Texto maior no botão para maior destaque e legibilidade */
+    }
+}
