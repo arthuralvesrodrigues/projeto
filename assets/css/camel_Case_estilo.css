@@ -60,7 +60,7 @@ section {
 /* Estilo da imagem de topo */
 #imagem {
     display: block; /* Garante que o elemento seja tratado como bloco */
-    background: var(--bk-img-login) url("./Bank.logo.png") no-repeat center top; /* Cor de fundo e imagem centralizada no topo, sem repetição */
+    background: var(--bk-img-login) url('../bancocentral.png') no-repeat center top; /* Cor de fundo e imagem centralizada no topo, sem repetição */
     background-size: cover;  /* Faz com que a imagem de fundo cubra toda a área do elemento */
     height: 120px; /* Altura um pouco menor para mobile */
     width: 30%; /* Define a largura como 30% do elemento pai */
